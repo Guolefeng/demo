@@ -1,0 +1,421 @@
+.nav {
+  width: 100%;
+  transition: background-color 0.3s; }
+  .nav .logo {
+    float: left;
+    width: 111px;
+    margin-top: 30px; }
+    .nav .logo img {
+      width: 170px;
+      height: 50px; }
+      .nav .logo img.normal {
+        display: none; }
+  .nav nav > ul {
+    float: right;
+    padding-top: 40px; }
+    .nav nav > ul > li {
+      position: relative;
+      float: left;
+      margin-left: 48px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff; }
+      .nav nav > ul > li.active:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        margin-top: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        border-radius: 50%; }
+      .nav nav > ul > li a {
+        color: #fff;
+        text-decoration: none; }
+        .nav nav > ul > li a:hover {
+          color: #2afbea; }
+        .nav nav > ul > li a.hover {
+          color: #2afbea; }
+      .nav nav > ul > li.sub:hover ul {
+        display: block; }
+      .nav nav > ul > li ul {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        z-index: 999;
+        width: 140px;
+        margin-left: -70px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+        .nav nav > ul > li ul:before {
+          content: '';
+          position: absolute;
+          top: -7px;
+          left: 50%;
+          z-index: 2;
+          width: 14px;
+          height: 14px;
+          margin-left: -7px;
+          transform: rotate(45deg);
+          background-color: #fff;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+        .nav nav > ul > li ul:after {
+          content: '';
+          position: absolute;
+          top: -40px;
+          left: 0;
+          z-index: 1;
+          display: block;
+          width: 100%;
+          height: 48px;
+          background-image: url(../images/placeholder.png); }
+        .nav nav > ul > li ul li {
+          position: relative;
+          z-index: 3;
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          border-bottom: 1px solid #F2F2F2; }
+          .nav nav > ul > li ul li:first-child {
+            background-color: #fff;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px; }
+          .nav nav > ul > li ul li a {
+            font-size: 16px;
+            color: #666666;
+            line-height: 50px; }
+            .nav nav > ul > li ul li a:hover {
+              color: #00C484; }
+          .nav nav > ul > li ul li:last-child {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px; }
+  .nav nav .download {
+    display: none;
+    float: right;
+    width: 138px;
+    height: 44px;
+    margin-top: 20px;
+    margin-left: 72px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 44px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #00C484;
+    outline: none;
+    border: none;
+    border-radius: 22px; }
+    .nav nav .download:hover {
+      background-color: #00D690; }
+  .nav.fixed {
+    position: fixed;
+    z-index: 999;
+    height: 84px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
+    .nav.fixed .logo {
+      margin-top: 25px; }
+      .nav.fixed .logo img.normal {
+        display: block; }
+      .nav.fixed .logo img.white {
+        display: none; }
+    .nav.fixed nav > ul {
+      padding-top: 36px; }
+      .nav.fixed nav > ul > li {
+        color: #333;
+        line-height: 1em; }
+        .nav.fixed nav > ul > li.active:after {
+          background-color: #00C484; }
+        .nav.fixed nav > ul > li a {
+          color: #333; }
+          .nav.fixed nav > ul > li a:hover {
+            color: #00D590; }
+    .nav.fixed nav .download {
+      display: block; }
+
+html[lang='en'] .nav .logo {
+  width: 136px;
+  margin-top: 28px; }
+  html[lang='en'] .nav .logo img {
+    width: 136px;
+    height: 34px; }
+html[lang='en'] .nav nav > ul > li {
+  margin-left: 32px; }
+html[lang='en'] .nav nav .download {
+  margin-left: 45px; }
+
+body header .nav {
+  position: absolute;
+  z-index: 10; }
+body header .banner {
+  position: relative; }
+  body header .banner .bg {
+    display: block;
+    width: 100%; }
+  body header .banner .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%; }
+  body header .banner .inner {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -40px;
+    z-index: 10;
+    text-align: center; }
+  body header .banner h3 {
+    margin-bottom: 45px;
+    font-size: 54px;
+    color: #fff;
+    font-weight: normal; }
+body > header .nav {
+  position: absolute;
+  z-index: 10; }
+body > header .banner {
+  position: relative; }
+  body > header .banner .bg {
+    display: block;
+    width: 100%; }
+  body > header .banner .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%; }
+  body > header .banner .inner {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -120px;
+    z-index: 10;
+    text-align: center; }
+  body > header .banner p {
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.8;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    font-size-adjust: 3px; }
+  body > header .banner h3 {
+    margin-top: 20px;
+    font-size: 54px;
+    color: #fff; }
+  body > header .banner .jobs {
+    display: block;
+    width: 155px;
+    height: 44px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding: 0;
+    font-size: 16px;
+    color: #fff;
+    line-height: 44px;
+    text-align: center;
+    text-decoration: none;
+    background: #000000;
+    background: -moz-linear-gradient(left, #349b98 0%, #65d09c 100%);
+    background: -webkit-gradient(linear, top left, bottom left, color-stop(0%, #349b98), color-stop(100%, #65d09c));
+    background: -webkit-linear-gradient(left, #349b98 0%, #65d09c 100%);
+    background: -o-linear-gradient(left, #349b98 0%, #65d09c 100%);
+    background: -ms-linear-gradient(left, #349b98 0%, #65d09c 100%);
+    background: linear-gradient(to right, #349b98 0%, #65d09c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#349b98', endColorstr='#65d09c',GradientType=0 );
+    border-radius: 22px; }
+body > main .xzHope {
+  height: auto;
+  padding-bottom: 70px;
+  text-align: center;
+  background-color: #f6f6f3; }
+  body > main .xzHope h3 {
+    padding-top: 70px;
+    margin-bottom: 40px;
+    font-size: 42px;
+    color: #333333;
+    line-height: 42px; }
+  body > main .xzHope dl {
+    width: 1180px;
+    heigt: auto;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; }
+    body > main .xzHope dl .lf {
+      float: left; }
+    body > main .xzHope dl .rg {
+      float: right; }
+    body > main .xzHope dl dt {
+      width: 530px;
+      height: 290px;
+      text-align: center; }
+    body > main .xzHope dl dd {
+      width: 600px;
+      text-align: left; }
+      body > main .xzHope dl dd img {
+        margin-top: 30px; }
+      body > main .xzHope dl dd h3 {
+        font-weight: normal;
+        color: #333333;
+        font-size: 32px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        text-align: left;
+        padding-top: 0; }
+        body > main .xzHope dl dd h3 b {
+          font-weight: normal;
+          font-size: 24px; }
+      body > main .xzHope dl dd span {
+        display: inline-block;
+        font-size: 24px;
+        color: #333333;
+        margin-top: 10px; }
+      body > main .xzHope dl dd p {
+        font-size: 16px;
+        color: #333333;
+        line-height: 30px;
+        margin-top: 20px; }
+body > main #jobs {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px; }
+  body > main #jobs .banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(http://websiteimg.xizi-ai.com/job11.jpg);
+    background-size: 1920px 408px;
+    background-position: top center;
+    background-repeat: no-repeat; }
+    body > main #jobs .banner h2 {
+      padding-top: 50px;
+      font-size: 42px;
+      color: #fff;
+      text-align: center; }
+  body > main #jobs .main {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 830px;
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 2px; }
+    body > main #jobs .main .title {
+      height: 74px;
+      border-bottom: 1px solid #F2F2F2; }
+      body > main #jobs .main .title h3 {
+        margin-left: 40px;
+        font-size: 14px;
+        color: #999999;
+        line-height: 74px; }
+    body > main #jobs .main .content > ul {
+      margin: 0;
+      padding-left: 20px;
+      padding-right: 20px; }
+      body > main #jobs .main .content > ul li {
+        padding-left: 20px;
+        padding-right: 20px; }
+        body > main #jobs .main .content > ul li.active .detail {
+          height: auto; }
+        body > main #jobs .main .content > ul li.active .summary .control .unfolded {
+          display: none; }
+        body > main #jobs .main .content > ul li.active .summary .control .fold {
+          display: inline-block; }
+        body > main #jobs .main .content > ul li .summary {
+          height: 84px;
+          border-bottom: 1px solid #F2F2F2;
+          cursor: pointer; }
+          body > main #jobs .main .content > ul li .summary:hover {
+            position: relative;
+            background-color: #F2F2F2;
+            border-bottom-color: #fff; }
+            body > main #jobs .main .content > ul li .summary:hover:before, body > main #jobs .main .content > ul li .summary:hover:after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              width: 20px;
+              height: 84px;
+              background-color: #F2F2F2; }
+            body > main #jobs .main .content > ul li .summary:hover:before {
+              left: -20px; }
+            body > main #jobs .main .content > ul li .summary:hover:after {
+              right: -20px; }
+          body > main #jobs .main .content > ul li .summary .right {
+            float: right; }
+          body > main #jobs .main .content > ul li .summary .team {
+            font-size: 24px;
+            color: #333333;
+            line-height: 84px; }
+          body > main #jobs .main .content > ul li .summary .control {
+            position: relative;
+            top: 27px;
+            margin-left: 36px; }
+            body > main #jobs .main .content > ul li .summary .control .unfolded {
+              display: inline-block; }
+            body > main #jobs .main .content > ul li .summary .control .fold {
+              display: none; }
+        body > main #jobs .main .content > ul li .detail {
+          height: 0px;
+          overflow: hidden; }
+          body > main #jobs .main .content > ul li .detail li {
+            border-bottom: 1px solid #F2F2F2; }
+            body > main #jobs .main .content > ul li .detail li:hover {
+              background-color: #F2F2F2;
+              border-bottom-color: #fff; }
+            body > main #jobs .main .content > ul li .detail li .job {
+              height: 84px;
+              font-size: 18px;
+              color: #333;
+              line-height: 84px; }
+            body > main #jobs .main .content > ul li .detail li .right {
+              float: right; }
+            body > main #jobs .main .content > ul li .detail li a {
+              display: inline-block;
+              width: 70px;
+              height: 30px;
+              font-size: 12px;
+              color: #00C484;
+              line-height: 30px;
+              text-align: center;
+              text-decoration: none;
+              border: 1px solid #24ab8e;
+              border-radius: 2px;
+              margin-top: 28px; }
+
+.envir {
+  width: 1180px;
+  height: 650px;
+  positon: relative;
+  overflow: hidden;
+  margin: 0 auto; }
+  .envir h3 {
+    font-size: 42px;
+    color: #333;
+    text-align: center; }
+  .envir .envir_all {
+    width: 1180px;
+    height: 340px;
+    positon: relative;
+    margin: 0 auto;
+    margin-top: 40px; }
+    .envir .envir_all ul {
+      width: 1180px;
+      height: 340px;
+      positon: relative;
+      overflow: hidden;
+      margin: 0 auto; }
+      .envir .envir_all ul li {
+        width: 250px;
+        height: 170px;
+        float: left; }
+        .envir .envir_all ul li img {
+          width: 100%; }
+
+/*# sourceMappingURL=jobs.css.map */

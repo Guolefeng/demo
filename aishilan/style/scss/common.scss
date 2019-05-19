@@ -1,0 +1,43 @@
+@charset 'utf-8';
+// @import 'vars';
+@import 'reset';
+
+// 导入样式模块
+@import './footer';
+
+// 导入插件样式
+@import './slider';
+.deepen{
+  color: #25cfbb;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wrapper {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+@mixin jbColor(){
+  background: #000000;
+    background: -moz-linear-gradient(left,  #349b98 0%, #65d09c 100%);
+    background: -webkit-gradient(linear,top left, bottom left , color-stop(0%,#349b98), color-stop(100%,#65d09c));
+    background: -webkit-linear-gradient(left,  #349b98 0%,#65d09c 100%);
+    background: -o-linear-gradient(left,  #349b98 0%,#65d09c 100%);
+    background: -ms-linear-gradient(left,  #349b98 0%,#65d09c 100%);
+    background: linear-gradient(to right,  #349b98 0%,#65d09c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#349b98', endColorstr='#65d09c',GradientType=0 );
+}

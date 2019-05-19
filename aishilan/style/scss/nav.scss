@@ -1,0 +1,201 @@
+@charset 'utf-8';
+.nav {
+  width: 100%;
+  transition: background-color 0.3s;
+  .logo {
+    float: left;
+    width: 111px;
+    margin-top: 30px;
+    img {
+      width: 170px;
+      height: 50px;
+      &.normal {
+        display: none;
+      }
+    }
+  }
+  nav {
+    > ul {
+      float: right;
+      padding-top: 40px;
+      > li {
+        position: relative;
+        float: left;
+        margin-left: 48px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        &.active:after {
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px;
+          margin-top: 4px;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            color: #2afbea;
+          }
+          &.hover{
+            color: #2afbea;
+
+          }
+        }
+        &.sub:hover {
+          ul {
+            display: block;
+          }
+        }
+        ul {
+          display: none;
+          position: absolute;
+          top: 40px;
+          left: 50%;
+          z-index: 999;
+          width: 140px;
+          margin-left: -70px;
+          border-radius: 5px;
+          background-color: #fff;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+          &:before {
+            content: '';
+            position: absolute;
+            top: -7px;
+            left: 50%;
+            z-index: 2;
+            width: 14px;
+            height: 14px;
+            margin-left: -7px;
+            transform: rotate(45deg);
+            background-color: #fff;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 0;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: 48px;
+            background-image: url(../images/placeholder.png);
+          }
+          li {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            border-bottom: 1px solid #F2F2F2;
+            &:first-child {
+              background-color: #fff;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+            }
+            a {
+              font-size: 16px;
+              color: #666666;
+              line-height: 50px;
+              &:hover {
+                color: #00C484;
+              }
+            }
+            &:last-child {
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+    .download {
+      display: none;
+      float: right;
+      width: 138px;
+      height: 44px;
+      margin-top: 20px;
+      margin-left: 72px;
+      font-size: 16px;
+      color: #fff;
+      line-height: 44px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #00C484;
+      outline: none;
+      border: none;
+      border-radius: 22px;
+      &:hover {
+        background-color: #00D690;
+      }
+    }
+  }
+  &.fixed {
+    position: fixed;
+    z-index: 999;
+    height: 84px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    .logo {
+      margin-top: 25px;
+      img {
+        &.normal {
+          display: block;
+        }
+        &.white {
+          display: none;
+        }
+      }
+    }
+    nav {
+      > ul {
+        padding-top: 36px;
+        > li {
+          color: #333;
+          line-height: 1em;
+          &.active:after {
+            background-color: #00C484;
+          }
+          a {
+            color: #333;
+            &:hover {
+              color: #00D590;
+            }
+          }
+        }
+      }
+      .download {
+        display: block;
+      }
+    }
+  }
+}
+
+html[lang='en'] {
+  .nav {
+    .logo {
+      width: 136px;
+      margin-top: 28px;
+      img {
+        width: 136px;
+        height: 34px;
+      }
+    }
+    nav {
+      > ul {
+        > li {
+          margin-left: 32px;
+        }
+      }
+      .download {
+        margin-left: 45px;
+      }
+    }
+  }
+}
